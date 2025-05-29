@@ -21,7 +21,7 @@ int main() {
             prod *= dig;
         }
        /* for (j = 0; j < 13; j++) {
-            product *= number[i + j]-'0';  
+            prod*= no[i + j]-'0';  
         } 
       
 */
