@@ -1,0 +1,6 @@
+- Add a git message on each commit.
+- The code should be properly indented.
+- All variable names should be meaningful.
+- The code should be properly commented.
+- **Important**: Include a doc string at the top that briefly lists and explains all the variables and functions. It should also finally include the output and the time taken. 
+- Add an associated file explaning the logic if the same is not present in the docstring.
