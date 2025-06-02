@@ -1,6 +1,11 @@
 #include <stdio.h>
+ #include <time.h>
+
 
 int main()
+{clock_t start, end;
+double cpu_time_used;
+start = clock(); 
 {
     int triangle[15][15] = {
         {75, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0},
@@ -19,21 +24,26 @@ int main()
         {63, 66, 4, 68, 89, 53, 67, 30, 73, 16, 69, 87, 40, 31, 0},
         {4, 62, 98, 27, 23, 9, 70, 98, 73, 93, 38, 53, 60, 4, 23}};
 
-         for (int row = 15 - 2; row >= 0; row--)
-         {
+    for (int row = 15 - 2; row >= 0; row--)
+    {
         for (int col = 0; col <= row; col++)
         {
             int leftNode = triangle[row + 1][col];
             int rightNode = triangle[row + 1][col + 1];
-           
-            if (leftNode > rightNode){
-            triangle[row][col] += leftNode;}
-            else{
-             triangle[row][col] += rightNode;}
-             
-        }
 
+            if (leftNode > rightNode)
+            {
+                triangle[row][col] += leftNode;
+            }
+            else
+            {
+                triangle[row][col] += rightNode;
+            }
+        }
     }
             printf("Maximum path sum: %d\n", triangle[0][0]);
-
-};
+ end = clock();
+    cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
+    printf("Time taken: %f seconds\n", cpu_time_used);
+}
+        };
