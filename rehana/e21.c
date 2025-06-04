@@ -18,10 +18,10 @@ time taken O(n√n)  where n = 10000 since we check each number and find its div
 //find sum of proper divisors of n
 int sumDiv(int n){
     int sum=1;
-for (int i=2;i*i<=n;i++){ 
-        if (n%i==0){
+for(int i=2;i*i<=n;i++){ 
+        if(n%i==0){
             sum+=i;
-            if (i!=n/i) {
+            if(i!=n/i) {
                 sum+=n/i; }
             }
         }
