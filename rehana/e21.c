@@ -1,28 +1,21 @@
 #include <stdio.h>
 /*
 This program finds the sum of all amicable numbers under 10000
-
-Variables:
 sumtotal: holds final sum of all amicable nos
 a,b:vars to hold a no. and its corresponding sum of divisors
 sumDiv(n):function that returns the sum of proper divisors of n (excluding n itself)
-
-Logic:
 For each number a from 2 to 9999:
-Calculate the sum of its proper divisors and store it in `b`
-if a≠ b and sumDiv(b) == a, then a and b form an amicable pair
+Calculate the sum of its proper divisors and store it in `b`if a≠b and sumDiv(b)==a, then a and b form an amicable pair
 Add `a' to the total (we don’t add both to avoid repeats we’ll reach `b` )
 
-In the sumDiv function:
+In sumDiv 
 start sum as 1 since 1 is always a proper divisor
-for all i from 2 to √n, if i divides n:
+for all i from 2 to √n, if i divides n
 add i and its pair n/i to the sum (if they are different)
-
-Output:
+o/p
 sum of all amicable nos 31626
 
-Time Taken:
-O(n√n), where n = 10000 since we check each number and find its divisors up to √n
+time taken O(n√n)  where n = 10000 since we check each number and find its divisors up to √n
 */
 
 
