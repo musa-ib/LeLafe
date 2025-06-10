@@ -46,6 +46,6 @@ int k=1000000;
 
     printf("The %dth permutation is ",k);
     perm(digits,n,k);
-    printf("\n");
+
 
 }
