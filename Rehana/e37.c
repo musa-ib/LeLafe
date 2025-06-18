@@ -41,7 +41,7 @@ bool isRightT(int n){
         n/=10;  // remove last digit ,,379,37,3,0 end loop
     }
     return true;
-}+
+}
 
 // count digits in a no.
 int cntDig(int n){
